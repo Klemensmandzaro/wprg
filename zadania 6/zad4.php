@@ -1,10 +1,24 @@
 <?php
-$a= 15;
-$b=-1;
+$a= "15689255555555555555555555555";
 
-while($a>=10)
+function sumka($a)
+    {
+        $suma=0;
+
+        for ($i= 0; $i< strlen($a); $i++) 
+        {
+            $suma+=$a[$i];
+        }
+        return $suma;
+    }
+
+$b=sumka($a);
+$c=strval($b);
+while($b>=10)
 {
-    
-    $a+=$b;
-    echo $a,", ";
+    echo $b,"<br>";
+    $b=sumka($c);
+    $c=strval($b);
 }
+echo $b;
+
