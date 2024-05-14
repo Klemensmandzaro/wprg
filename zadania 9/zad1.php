@@ -38,7 +38,16 @@
             {
                 echo (date('Y')-date('Y', strtotime($a)));
             }
-            $data4=date('z');
+
+            if (date('L', strtotime($a))==0)
+            {
+                $data4=(date('z')-1);
+            }
+            else
+            {
+                $data4=date('z');
+            }
+            
             echo("<br>");
             if ($data4>=date('z', strtotime($a)))
             {
