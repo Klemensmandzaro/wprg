@@ -13,15 +13,17 @@
             public $kurs=0;
             function __construct($name, $cena, $kurs) {
                 $this->name = $name;
-                $this->age = $age;
+                $this->cena = $cena;
                 $this->kurs = $kurs;
             }
 
             function ObliczCene(){
-                return $this->cena
+                echo ($this->cena*$this->kurs);
             }
     
         }
+        $auto= new NoweAuto("Skoda",20,30);
+        $auto->ObliczCene();
     ?>
 </body>
 </html>
